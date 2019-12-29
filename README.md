@@ -76,30 +76,3 @@ $ python3 main.py --domain https://blog.lesite.us --images --parserobots | xmlli
 ```
 $ python3 main.py --domain https://blog.lesite.us --num-workers 4
 ```
-
-## Docker usage
-
-#### Build the Docker image:
-
-  ```
-  $ docker build -t python-sitemap:latest .
-  ```
-
-#### Run with default domain :
-
-  ```
-  $ docker run -it python-sitemap
-  ```
-
-#### Run with custom domain :
-
-  ```
-  $ docker run -it python-sitemap --domain https://www.graylog.fr
-  ```
-
-#### Run with config file and output :
-***You need to configure config.json file before***
-
-  ```
-  $ docker run -it -v `pwd`/config/:/config/ -v `pwd`:/home/python-sitemap/ python-sitemap --config config/config.json
-  ```
